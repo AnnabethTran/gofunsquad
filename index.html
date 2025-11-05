@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- head
+
+        Purpose:
+        - Title used here shows up in the browser tab
+        - Link to the favicon (small image that appears in the browser tab)
+        - Link to the CSS file (used to style the webpage)
+
+        When To Modify:
+        - [x] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 2 (STRETCH FEATURE) (favicon)
+        - [ ] Any time after
+        -->
+        <title>Enjoy And Laugh With Your Squad</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+    
+        <!-- navbar
+
+        Purpose:
+        - Navigation bar that allows users to jump to different sections of the webpage
+        - Also holds buttons for user settings (dark mode, reduce motion)
+
+        When To Modify:
+        - [X] Project 4 (REQUIRED FEATURE)
+        - [X] Project 5 (REQUIRED FEATURE) 
+        - [ ] Project 8 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        -->
+        <div class="navbar">
+            <ul>
+                <li><a href="#home">Homepage</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#links">Links</a></li>
+                <li>
+                    <button id="theme-button">Toggle Dark Mode</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- headings
+
+        Purpose:
+        - Main header section of the webpage
+        - Contains the title, subtitle, image, and key buttons for the webpage
+
+        When To Modify:
+        - [x] Project 2 (REQUIRED FEATURE) 
+        - [x] Project 3 (REQUIRED FEATURE) 
+        - [X] Project 4 (REQUIRED FEATURE) 
+        - [ ] Any time after
+        -->
+
+        <div class="header-container" id="home">
+            <div id="header-img">
+                <img src="./img/logo_go_fun_squad.jpg"/>
+            </div>
+            <div class="header-item">
+                <h1>Go Fun Squad</h1>
+            </div>       
+            <div class="header-item">
+                <h2>Explore. Enjoy. Have Fun with Friends.</h2>                
+            </div>
+            <div id="header-button">
+                <button type="button">Sign Up</button>
+                <button type="button">Schedule Event</button>
+            </div>
+        </div>
+        <!-- about
+
+        Purpose:
+        - Section for general info about the event
+        - Contains a video, description, and key points about the event
+
+        When To Modify:
+        - [x] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 2 (STRETCH FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <div id="about">
+            <h2>About the Event</h2>
+            <p>Don't know what activities to do with your friends? GoFunSquad gets your back.
+                Our website helps your friend group live the moment to the fullest, 
+                    from at home to outside, 
+                    from a chilling movie night to an energetic concert.
+            </p>
+
+            <h3>Explore fun hangouts around your area</h3>
+            <!-- <h4>Tag Line</h4>
+            <ul>
+                <li> <b>Bullet 1:</b> <i>Description</i></li>
+                <li> <b>Bullet 2:</b> <i>Description</i></li>
+                <li> <b>Bullet 3:</b> <i>Description</i></li>
+            </ul> -->
+        </div>
+
+        <!-- schedule
+
+        Purpose:
+        - Section for specific info about the event's schedule
+        - Contains images and descriptions of each activity
+
+        When To Modify:
+        - [x] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <div id="schedule">
+            <h2>Event Schedule</h2>
+
+            <img class="event-img" alt="Movie night" src="./img/movie-night.jpg"/>
+            <h3>Movie nights</h3>
+            <p>Relax after a long day with a cozy event at home</p>
+                
+            <img class="event-img" alt="Convert night" src="./img/concert-night.jpg"/>
+            <h3>Concerts</h3>
+            <p>Immerse in music and festivities nearby</p>
+
+            <img class="event-img" src="./img/camping-event.jpeg"/>
+            <h3>Camping dates</h3>
+            <p>Nature and friends are in your harmony</p>
+        </div>
+
+        <!-- rsvp
+
+        Purpose:
+        - Section for users to sign up for the event
+        - Contains a form for users to input their information, 
+        and a list of other users who have signed up
+
+        When To Modify:
+        - [X] Project 6 (REQUIRED FEATURE) 
+        - [ ] Project 6 (STRETCH FEATURE) 
+        - [ ] Any time after
+        --> 
+        <div id="rsvp">
+            <h2>RSVP</h2>
+            <div class="rsvp-container">
+                <div class="rsvp-para">
+                    <!-- info goes here -->
+                    <p>
+                        We offer all options from chilling 🎵 to full-out crazy party nights 🪩.
+                        Complete the form to RSVP fun events with your gang ╰(*°▽°*)╯
+                    </p>
+                </div>
+                <div class="rsvp-participants">
+                    <p>🎟️ Dacia from Pennsylvania has RSVP'd.</p>
+                    <p>🎟️ Amy from New York has RSVP'd.</p>
+                    <p>🎟️ Theresa from Montana has RSVP'd.</p>
+                </div>
+            </div>
+
+            <!--- Sign RSVP Form --->
+            <div class="form-container">
+                <form id="rsvp-form" title="rsvp-form">
+                    <!-- form inputs go here -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="Name">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="Email">
+
+                    <label for="state">State:</label>
+                    <input type="state" id="state" name="State">
+
+                    <label for="theme">Theme:</label>
+                    <input type="text" id="theme" name="Theme">
+                </form>
+                <!-- Submit button: default type is 'submit' -->
+                <button id="rsvp-button">Submit RSVP</button>
+
+            </div>
+        </div>
+
+        <!-- success modal
+
+        Purpose:
+        - Modal that appears when a user successfully signs up for the event
+        - Contains a personalized message and image
+
+        When To Modify:
+        - [ ] Project 9 (REQUIRED FEATURE)
+        - [ ] Project 9 (STRETCH FEATURE) 
+        - [ ] Any time after
+
+        🤔 Does it actually matter where I place the modal HTML?
+        Nope, it can actually go anywhere in the body section.
+
+        This is because the modal will always be in one of two states: 
+        occupying the whole screen or completely hidden. 
+        It doesn't matter where in the DOM it lives as long is we are able to access it 
+        and make it fill up the screen with position: absolute.
+
+        Be careful, though: 
+        If you place the modal inside another container element, 
+        like a div, then it will only cover that container element 
+        and not the whole screen. 
+        Can you think of an example where that would be the desired effect?
+        --> 
+
+        <div id="success-modal" class="modal">
+            <div class="modal-container">
+                <div id="modal-item">
+                    <p id="modal-text">Success RSVP message</p>
+                </div>
+                <div id="modal-item">
+                    <img id="modal-img" src="img/fun-playful-logo.avif">
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- links
+
+        Purpose:
+        - Links to other resources related to the event
+
+        When To Modify:
+        - [ ] Project 2 (STRETCH FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <div id="links">
+            <h2>Links</h2>
+
+            <!-- This <a> block is one link.  Copy and paste all 6 lines to create another link. -->
+            <a class="block" href="https://www.codepath.org">
+                <article>
+                    <h3>Link title</h3>
+                    <p>Link description</p>
+                </article>
+            </a>
+        </div>
+
+            
+        <!-- footer [PLACEHOLDER] [ADDED IN UNIT 3] -->
+        <div class="footer">
+            <ul>
+                <li><a href="https://www.codepath.org">Learn More</a></li>
+                <li><a href="https://www.codepath.org">Email Our Team</a></li>
+            </ul>
+        </div>
+        <!-- script [PLACEHOLDER] [ADDED IN UNIT 5] -->
+
+        <script src="index.js"></script>
+    </body>
+</html>
